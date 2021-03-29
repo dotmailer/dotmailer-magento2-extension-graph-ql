@@ -1,0 +1,13 @@
+type Query {
+    isEasyEmailCaptureNewsletterEnabled: isConfigSettingEnabledOutput @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\EasyEmailCaptureNewsletter") @doc(description:"Returns if easy email capture for newsletter is enabled")
+    isEasyEmailCaptureCheckoutEnabled: isConfigSettingEnabledOutput @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\EasyEmailCaptureCheckout") @doc(description:"Returns if easy email capture for checkout is enabled")
+    isWebBehaviorTrackingEnabled: isConfigSettingEnabledOutput @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\WebBehaviorTracking") @doc(description:"Returns if web behavior tracking is enabled")
+}
+
+type Mutation {
+    updateQuoteEmail(email: String!, cartId: String!): Boolean @doc(description:"Updates the email address of a quote.") @resolver(class: "Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\UpdateQuoteEmail")
+}
+
+type isConfigSettingEnabledOutput {
+    is_enabled: Boolean @doc(description: "Is config setting enabled value")
+}
