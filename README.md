@@ -6,6 +6,8 @@
 **Dotdigitalgroup_EmailGraphQl** supports our [core module](https://github.com/dotmailer/dotmailer-magento2-extension).
 It provides type and resolver information for Magento to generate endpoints for:
 - fetching tracking configuration data from the instance
+- fetching email capture configuration from the instance
+- retrieving order data for customers and guests on the order confirmation page 
 - updating the quote email address
 
 ## Requirements
@@ -22,6 +24,25 @@ query getTrackingData {
             roi_tracking_enabled
             wbt_profile_id
             region_prefix
+        }
+    }
+
+query isEasyEmailCaptureNewsletterEnabled {
+        emailCaptureNewsletter {
+            is_enabled
+        }
+    }
+
+query isEasyEmailCaptureCheckoutEnabled {
+        emailCaptureCheckout {
+            is_enabled
+        }
+    }
+
+query getOrderDetails($orderNumber: String!) {
+        orderData(order_id: $orderNumber) {
+            items
+            total
         }
     }
 ```
