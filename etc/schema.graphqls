@@ -1,3 +1,4 @@
+// @codingStandardsIgnoreFile
 type Query {
     emailCaptureNewsletter: isConfigSettingEnabledOutput @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\EasyEmailCaptureNewsletter") @doc(description:"Returns status of Easy Email Capture for Newsletter.")
     emailCaptureCheckout: isConfigSettingEnabledOutput @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\EasyEmailCaptureCheckout") @doc(description:"Returns status of Easy Email Capture for Checkout.")

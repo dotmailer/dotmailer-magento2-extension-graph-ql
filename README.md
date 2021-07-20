@@ -56,3 +56,6 @@ mutation updateQuoteEmail($email: String!, $cartId: String!) {
         )
     }
 ```
+
+## 1.0.0
+- Initial release
