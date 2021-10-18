@@ -18,7 +18,7 @@ type trackingData {
     page_tracking_enabled: Boolean @doc(description: "Is Page Tracking enabled")
     roi_tracking_enabled: Boolean @doc(description: "Is ROI Tracking enabled")
     wbt_profile_id: String @doc(description: "Web Behaviour Tracking profile ID")
-    region_prefix: String @doc(description: "dotdigital region prefix")
+    region_prefix: String @doc(description: "Dotdigital region prefix")
 }
 
 type Order @doc(description: "Contains details about the requested order") {
