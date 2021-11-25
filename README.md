@@ -12,7 +12,7 @@ It provides type and resolver information for Magento to generate endpoints for:
 
 ## Requirements
 
-- This module requires the `Dotdigitalgroup_Email` module v4.10.0+
+- This module requires the `Dotdigitalgroup_Email` module v4.14.0+
 
 ## Endpoints
 
@@ -56,6 +56,14 @@ mutation updateQuoteEmail($email: String!, $cartId: String!) {
         )
     }
 ```
+
+## 1.1.0-RC1
+
+##### What's new
+- This module has been renamed `dotdigital/dotdigital-magento2-extension-graph-ql`.
+
+##### Improvements
+- `setup_version` has been removed from module.xml.
 
 ## 1.0.0
 - Initial release
