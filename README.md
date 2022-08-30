@@ -57,7 +57,8 @@ query getProductBrandValue($product_ids: [String]!) {
        }
     }
 
-}```
+}
+```
 
 **Mutations**
 ```
@@ -74,7 +75,10 @@ mutation updateQuoteEmail($email: String!, $cartId: String!) {
 ### 1.2.0
 
 ##### What's new
-- We’ve added a new endpoint to retrieve the nominated brand attribute.
+- We've added a new endpoint to retrieve the nominated brand attribute.
+
+##### Bug fixes
+- We updated the module's PSR-4 filepath.
 
 ### 1.1.0
 
