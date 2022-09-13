@@ -51,13 +51,11 @@ query getOrderDetails($orderNumber: String!) {
 query getProductBrandValue($product_ids: [String]!) {
        productBrands(product_ids: $product_ids) {
            items {
-             brand
-             product_id
+               brand
+               product_id
            }
        }
     }
-
-}
 ```
 
 **Mutations**
