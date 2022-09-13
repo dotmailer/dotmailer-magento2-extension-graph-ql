@@ -70,6 +70,11 @@ mutation updateQuoteEmail($email: String!, $cartId: String!) {
 
 ## Changelog
 
+### 1.2.1
+
+##### Bug fixes
+- We restored compatibility with PHP 7.2.
+
 ### 1.2.0
 
 ##### What's new
