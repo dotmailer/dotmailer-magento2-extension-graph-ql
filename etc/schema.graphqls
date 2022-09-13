@@ -4,8 +4,7 @@ type Query {
     emailCaptureCheckout: isConfigSettingEnabledOutput @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\EasyEmailCaptureCheckout") @doc(description:"Returns status of Easy Email Capture for Checkout.")
     trackingData: trackingData @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\TrackingData") @doc(description:"Retrieves an array of configuration data for different types of tracking.")
     orderData(order_id: String!): Order @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\OrderData") @doc(description:"Retrieves information about an order by order id.")
-    productBrands(product_ids: [String]!): Brands @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\ProductBrands") @doc(description:"Retrieves the value of the brand attribute for a given product.")
-
+    productBrands(product_ids: [String]!): Brands @resolver (class: "\\Dotdigitalgroup\\EmailGraphQl\\Model\\Resolver\\ProductBrands") @doc(description:"Retrieves the values of the brand attribute for an array of products.")
 }
 
 type Mutation {
@@ -28,12 +27,12 @@ type Order @doc(description: "Contains details about the requested order") {
     total: String @doc(description: "Contains the calculated total for this order")
 }
 
-type BrandItem @doc(description: "Contains details about the requested brand") {
-    brand: String @doc(description: "The brand of the product")
+type BrandItem @doc(description: "Contains a brand attribute value") {
+    brand: String @doc(description: "The brand value")
     product_id: Int @doc(description: "The product ID")
 }
 
-type Brands @doc(description: "Contains the value of the brand attribute for the requested product") {
+type Brands @doc(description: "Contains values of the brand attribute for the requested product(s)") {
     items: [BrandItem]
 }
 

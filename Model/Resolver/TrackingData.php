@@ -25,6 +25,8 @@ class TrackingData implements ResolverInterface
     }
 
     /**
+     * Resolve query.
+     *
      * @param Field $field
      * @param \Magento\Framework\GraphQl\Query\Resolver\ContextInterface $context
      * @param ResolveInfo $info
