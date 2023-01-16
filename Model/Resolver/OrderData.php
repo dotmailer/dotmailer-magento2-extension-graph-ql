@@ -4,32 +4,35 @@ namespace Dotdigitalgroup\EmailGraphQl\Model\Resolver;
 
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Exception\GraphQlInputException;
+use Magento\Framework\GraphQl\Query\Resolver\ContextInterface;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
 use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 use Magento\Sales\Api\Data\OrderInterface;
+use Magento\Sales\Model\OrderFactory;
 
 class OrderData implements ResolverInterface
 {
+
     /**
-     * @var OrderInterface
+     * @var OrderFactory
      */
-    private $orderInterface;
+    private OrderFactory $orderFactory;
 
     /**
      * OrderData constructor.
-     * @param OrderInterface $orderInterface
+     * @param OrderFactory $orderFactory
      */
     public function __construct(
-        OrderInterface $orderInterface
+        OrderFactory $orderFactory
     ) {
-        $this->orderInterface = $orderInterface;
+        $this->orderFactory = $orderFactory;
     }
 
     /**
      * Resolve query.
      *
      * @param Field $field
-     * @param \Magento\Framework\GraphQl\Query\Resolver\ContextInterface $context
+     * @param ContextInterface $context
      * @param ResolveInfo $info
      * @param array|null $value
      * @param array|null $args
@@ -48,9 +51,7 @@ class OrderData implements ResolverInterface
         }
 
         $orderId = $args['order_id'];
-
-        $order = $this->orderInterface->loadByIncrementId($orderId);
-
+        $order = $this->orderFactory->create()->loadByIncrementId($orderId);
         $items = [];
 
         foreach ($order->getItems() as $orderItem) {
