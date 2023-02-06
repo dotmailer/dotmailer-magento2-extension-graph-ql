@@ -70,6 +70,11 @@ mutation updateQuoteEmail($email: String!, $cartId: String!) {
 
 ## Changelog
 
+### 1.2.2
+
+##### Improvements
+- We've updated a resolver to use a factory class.
+
 ### 1.2.1
 
 ##### Bug fixes
