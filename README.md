@@ -61,9 +61,13 @@ mutation updateQuoteEmail($email: String!, $cartId: String!) {
     }
 ```
 
+## Usage
+
+For examples on how to integrate these endpoints into your front end, please see our [Dotdigital PWA Toolkit](https://github.com/dotmailer/ec-magento-pwa-toolkit).
+
 ## Changelog
 
-### 1.2.3
+### 2.0.0
 
 ##### Bug fixes
 - We've removed the OrderData resolver to prevent any exploits of this endpoint.
