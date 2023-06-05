@@ -40,13 +40,6 @@ query isEasyEmailCaptureCheckoutEnabled {
             is_enabled
         }
     }
-
-query getOrderDetails($orderNumber: String!) {
-        orderData(order_id: $orderNumber) {
-            items
-            total
-        }
-    }
     
 query getProductBrandValue($product_ids: [String]!) {
        productBrands(product_ids: $product_ids) {
@@ -69,6 +62,11 @@ mutation updateQuoteEmail($email: String!, $cartId: String!) {
 ```
 
 ## Changelog
+
+### 1.2.3
+
+##### Bug fixes
+- We've removed the OrderData resolver to prevent any exploits of this endpoint.
 
 ### 1.2.2
 
