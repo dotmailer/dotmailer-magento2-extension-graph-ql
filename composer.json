@@ -2,7 +2,7 @@
     "name": "dotdigital/dotdigital-magento2-extension-graph-ql",
     "description": "Dotdigital for Magento 2: Core GraphQl module",
     "type": "magento2-module",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "license": "MIT",
     "repositories": [
         {
@@ -14,13 +14,12 @@
         "dotmailer/dotmailer-magento2-extension-graph-ql": "*"
     },
     "require": {
+        "php": "^7.4||^8.0",
         "dotdigital/dotdigital-magento2-extension": "^4.14.0",
-        "magento/framework": ">=101 <104",
-        "magento/module-config": ">=100 <103",
-        "magento/module-backend": ">=100 <103",
-        "magento/module-quote": ">=100 <103",
-        "magento/module-checkout": ">=100 <103",
-        "magento/module-sales": ">=100 <104"
+        "magento/framework": ">=102 <104",
+        "magento/module-quote": ">=101 <103",
+        "magento/module-catalog": ">=103 <105",
+        "magento/module-store": ">=101 <102"
     },
     "autoload": {
         "files": [ "registration.php" ],
