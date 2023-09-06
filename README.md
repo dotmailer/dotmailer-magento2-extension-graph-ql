@@ -67,6 +67,11 @@ For examples on how to integrate these endpoints into your front end, please see
 
 ## Changelog
 
+### 2.0.1
+
+##### Improvements
+- We've updated the module's dependencies. The module now requires PHP 7.4+ and Magento 2.3.7+.
+
 ### 2.0.0
 
 ##### Bug fixes
