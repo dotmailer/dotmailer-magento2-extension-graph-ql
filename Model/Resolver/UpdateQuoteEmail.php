@@ -61,8 +61,8 @@ class UpdateQuoteEmail implements ResolverInterface
         Field $field,
         $context,
         ResolveInfo $info,
-        array $value = null,
-        array $args = null
+        ?array $value = null,
+        ?array $args = null
     ) {
         $email = trim($args['email']);
         $cartHash = $args['cartId'];

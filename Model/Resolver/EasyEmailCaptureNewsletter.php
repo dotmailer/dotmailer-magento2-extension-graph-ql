@@ -49,8 +49,8 @@ class EasyEmailCaptureNewsletter implements ResolverInterface
         Field $field,
         $context,
         ResolveInfo $info,
-        array $value = null,
-        array $args = null
+        ?array $value = null,
+        ?array $args = null
     ) {
         $isEmailCaptureEnabled = $this->scopeConfig->getValue(
             Config::XML_PATH_CONNECTOR_EMAIL_CAPTURE_NEWSLETTER,
